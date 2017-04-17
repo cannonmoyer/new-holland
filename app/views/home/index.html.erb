@@ -1,0 +1,435 @@
+<header  id="new" style="background-image: url(/img/background_image.jpg); background-size: 100% 100%; padding: 25%;">
+<div style="position: fixed;top: 2px; left:31%;">
+    
+</div>
+</header>
+<body>
+<section >
+    <div id="desktop_menu" class="container" style="background-color:#3574C1;padding: 0;margin-top: -36px;">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a href="/listings" type="button" class="btn btn-default">New & Used Equipment</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="#feature" type="button" class="btn btn-default">Featured Equipment</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="#contact" type="button" class="btn btn-default">Location & Contact</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="#about" type="button" class="btn btn-default">About</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mobile_menu" >
+        <button class="cn-button" id="cn-button">Menu</button>
+        <div class="cn-wrapper" id="cn-wrapper">
+            <ul>
+                <li><a href="/listings"><span class="glyphicon glyphicon-home"></span></a></li>
+                <li><a href="#feature"><span class="glyphicon glyphicon-briefcase"></span></a></li>
+                <li><a href="#contact"><span class="glyphicon glyphicon-phone-alt"></span></a></li>
+                <li><a href="#about"><span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span></a></li>
+            </ul>
+        </div>
+        <div id="cn-overlay" class="cn-overlay"></div>
+    </div>
+</section>
+<section>
+    <div class="container" style="background-color:#3574C1;">
+        <div class="row">
+            <p style="padding:2% 6%;font-size: 1.7em; ">Welcome! Twin Hills Equipment is your new premier dealer for New Holland, Scag, Rhino, and more with 
+                over 75 years of experience in our sales and service departments!</p>
+            <div class="col-md-2 col-xs-12" ></div>
+            <div id="feature" class="text-center col-md-8 col-xs-12" style="border-top: 3px solid #fff; padding:2% 0%;">
+                <h3>Featured Listings</h3>
+            </div>
+            <div class="col-md-2 col-xs-12"></div>
+        </div>
+        
+            <div class="row text-center">
+                <% if @size > 0 %>
+                <div class="col-md-6 col-xs-12">
+                    <div class="wrapper custom_size_1">
+                        <div class="ribbon-wrapper-green">
+                            <div class="ribbon-green">Featured!</div>
+                        </div>
+                        <div><img class="custom_prod" src="<%= @listings[0].image_name %>"> </div>
+                        <h5 style="font-weight: 600;"><%= @listings[0].name %></h5>
+                        <div class="row">
+                            <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                                <h4><%= @listings[0].msrp %></h4>
+                                <p style="color: black; font-weight: 600;">STARTING</p>
+                                <P style="color: black; font-weight: 600;">MSRP*</P>
+                            </div>
+                            <div class="col-md-6 text-right" style="padding-right: 11%;">
+                                <h4></h4>
+                                <p style="color: black; font-weight: 600;"></p>
+                                <P style="color: black; font-weight: 600;"></P>
+                            </div>
+                        </div>
+                        <% if @listings[0].link == nil or @listings[0].link == "" %>
+                            <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                        <% else %>
+                            <a href="<%= @listings[0].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                        <% end %>
+                    </div>
+                </div>
+            
+            <% end %>
+            <% if @size > 1 %>
+            
+                <div class="col-md-6 col-xs-12">
+                    <div class="wrapper custom_size_1">
+                        <div class="ribbon-wrapper-green">
+                            <div class="ribbon-green">Featured!</div>
+                        </div>
+                        <div><img class="custom_prod" src="<%= @listings[1].image_name %>"> </div>
+                        <h5 style="font-weight: 600;"><%= @listings[1].name %></h5>
+                        <div class="row">
+                            <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                                <h4><%= @listings[1].msrp %></h4>
+                                <p style="color: black; font-weight: 600;">STARTING</p>
+                                <P style="color: black; font-weight: 600;">MSRP*</P>
+                            </div>
+                            <div class="col-md-6 text-right" style="padding-right: 11%;">
+                                <h4></h4>
+                                <p style="color: black; font-weight: 600;"></p>
+                                <P style="color: black; font-weight: 600;"></P>
+                            </div>
+                        </div>
+                        <% if @listings[1].link == nil or @listings[1].link == "" %>
+                            <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                        <% else %>
+                            <a href="<%= @listings[1].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                        <% end %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="row text-center">
+            <% if @size > 2 %>
+            <div class="col-md-4 col-xs-12">
+                <div class="wrapper custom_size_2">
+                    <div class="ribbon-wrapper-green">
+                        <div class="ribbon-green">Featured!</div>
+                    </div>
+                    <div><img class="custom_prod" src="<%= @listings[2].image_name %>"> </div>
+                    <h5 style="font-weight: 600;"><%= @listings[2].name %></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                            <h4><%= @listings[2].msrp %></h4>
+                            <p style="color: black; font-weight: 600;">STARTING</p>
+                            <p style="color: black; font-weight: 600;">MSRP*</p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right: 11%;">
+                            <h4></h4>
+                            <p style="color: black; font-weight: 600;"></p>
+                            <P style="color: black; font-weight: 600;"></p></p>
+                        </div>
+                    </div>
+                    <% if @listings[2].link == nil or @listings[2].link == "" %>
+                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                    <% else %>
+                        <a href="<%= @listings[2].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+            <% if @size > 3 %>
+            <div class="col-md-4 col-xs-12">
+                <div class="wrapper custom_size_2">
+                    <div class="ribbon-wrapper-green">
+                        <div class="ribbon-green">Featured!</div>
+                    </div>
+                    <div><img class="custom_prod" src="<%= @listings[3].image_name %>"> </div>
+                    <h5 style="font-weight: 600;"><%= @listings[3].name %></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                            <h4><%= @listings[3].msrp %></h4>
+                            <p style="color: black; font-weight: 600;">STARTING</p>
+                            <p style="color: black; font-weight: 600;">MSRP*</p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right: 11%;">
+                            <h4></h4>
+                            <p style="color: black; font-weight: 600;"></p>
+                            <P style="color: black; font-weight: 600;"></p></p>
+                        </div>
+                    </div>
+                    <% if @listings[3].link == nil or @listings[3].link == "" %>
+                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                    <% else %>
+                        <a href="<%= @listings[3].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+            <% if @size > 4 %>
+            <div class="col-md-4 col-xs-12">
+                <div class="wrapper custom_size_2">
+                    <div class="ribbon-wrapper-green">
+                        <div class="ribbon-green">Featured!</div>
+                    </div>
+                    <div><img class="custom_prod" src="<%= @listings[4].image_name %>"> </div>
+                    <h5 style="font-weight: 600;"><%= @listings[4].name %></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                            <h4><%= @listings[4].msrp %></h4>
+                            <p style="color: black; font-weight: 600;">STARTING</p>
+                            <p style="color: black; font-weight: 600;">MSRP*</p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right: 11%;">
+                            <h4></h4>
+                            <p style="color: black; font-weight: 600;"></p>
+                            <P style="color: black; font-weight: 600;"></p></p>
+                        </div>
+                    </div>
+                    <% if @listings[4].link == nil or @listings[4].link == "" %>
+                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                    <% else %>
+                        <a href="<%= @listings[4].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div class="row text-center">
+            <% if @size > 5 %>
+            <div class="col-md-4 col-xs-12">
+                <div class="wrapper custom_size_2">
+                    <div class="ribbon-wrapper-green">
+                        <div class="ribbon-green">Featured!</div>
+                    </div>
+                    <div><img class="custom_prod" src="<%= @listings[5].image_name %>"> </div>
+                    <h5 style="font-weight: 600;"><%= @listings[5].name %></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                            <h4><%= @listings[5].msrp %></h4>
+                            <p style="color: black; font-weight: 600;">STARTING</p>
+                            <p style="color: black; font-weight: 600;">MSRP*</p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right: 11%;">
+                            <h4></h4>
+                            <p style="color: black; font-weight: 600;"></p>
+                            <P style="color: black; font-weight: 600;"></p></p>
+                        </div>
+                    </div>
+                    <% if @listings[5].link == nil or @listings[5].link == "" %>
+                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                    <% else %>
+                        <a href="<%= @listings[5].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+            <% if @size > 6 %>
+            <div class="col-md-4 col-xs-12">
+                <div class="wrapper custom_size_2">
+                    <div class="ribbon-wrapper-green">
+                        <div class="ribbon-green">Featured!</div>
+                    </div>
+                    <div><img class="custom_prod" src="<%= @listings[6].image_name %>"> </div>
+                    <h5 style="font-weight: 600;"><%= @listings[6].name %></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                            <h4><%= @listings[6].msrp %></h4>
+                            <p style="color: black; font-weight: 600;">STARTING</p>
+                            <p style="color: black; font-weight: 600;">MSRP*</p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right: 11%;">
+                            <h4></h4>
+                            <p style="color: black; font-weight: 600;"></p>
+                            <P style="color: black; font-weight: 600;"></p></p>
+                        </div>
+                    </div>
+                    <% if @listings[6].link == nil or @listings[6].link == "" %>
+                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                    <% else %>
+                        <a href="<%= @listings[6].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+            <% if @size > 7 %>
+            <div class="col-md-4 col-xs-12">
+                <div class="wrapper custom_size_2">
+                    <div class="ribbon-wrapper-green">
+                        <div class="ribbon-green">Featured!</div>
+                    </div>
+                    <div><img class="custom_prod" src="<%= @listings[7].image_name %>"> </div>
+                    <h5 style="font-weight: 600;"><%= @listings[7].name %></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                            <h4><%= @listings[7].msrp %></h4>
+                            <p style="color: black; font-weight: 600;">STARTING</p>
+                            <p style="color: black; font-weight: 600;">MSRP*</p>
+                        </div>
+                        <div class="col-md-6 text-right" style="padding-right: 11%;">
+                            <h4></h4>
+                            <p style="color: black; font-weight: 600;"></p>
+                            <P style="color: black; font-weight: 600;"></p></p>
+                        </div>
+                    </div>
+                    <% if @listings[7].link == nil or @listings[7].link == "" %>
+                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                    <% else %>
+                        <a href="<%= @listings[7].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-xs-12" ></div>
+            <div id="contact" class="text-center col-md-8 col-xs-12" style="border-top: 3px solid #fff;padding:2% 0%;">
+                <h3>Location & Contact</h3>
+            </div>
+            <div class="col-md-2 col-xs-12"></div>
+            <div class="clearfix"></div>
+            <div class="col-md-4 col-xs-12" style="padding-left: 5%;">
+                <p><span>Phone:</span> +1 (662) 851-2070</p>
+                <p><span>Email:</span> info@twinhillseq.com</p>
+                <p><span>Address:</span> 6012 HWY 72 Byhalia, Ms 38611</p>
+                <p></p>
+                <p><span>Hours:</span><br>
+                    <span>Mon-Fri:</span> 8:00 A.M.-5 P.M.<br>
+                    <span>Saturday:</span> Closed.<br>
+                    <span>Sunday:</span>Closed.
+                </p>
+            </div>
+            <div class="col-md-8 col-xs-12 ">
+                <div class="map-responsive">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.486948563219!2d-89.55219138476053!3d34.969465680366376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x887fba0a83e571ad%3A0xf3c981af42d6a461!2s6012+US-72%2C+Byhalia%2C+MS+38611!5e0!3m2!1sen!2sus!4v1492403076858" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-xs-12" ></div>
+            <div id="about" class="text-center col-md-8 col-xs-12" style="border-top: 3px solid #fff;padding:2% 0%; margin-top: 3%;">
+                <h3>About Us</h3>
+            </div>
+            <div class="col-md-2 col-xs-12"></div>
+            <div class="clearfix"></div>
+            <div class="col-md-6 col-xs-12">
+                <p style="font-size: 1.5em; padding: 2% 2%;"> Twin Hills Equipment is your new premier dealer for New Holland, Scag, Rhino, and more with 
+                over 75 years of experience in our sales and service departments! We have the expertise to help you make your next purchase and keep it maintained for years to come.</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="text-center"><img src="/img/about.jpg" width="100%"> </div>
+                <p style="font-size: 1.3em;Padding-top:2%;"></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="text-align: center;">
+    <div class="container " style="padding:3% 0%;">
+        <a class="btn btn-social-icon btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);"><span class="fa fa-facebook"></span></a>
+        <a style="margin: 0% 3%;" class="btn btn-social-icon btn-twitter" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);"><span class="fa fa-twitter"></span></a>
+        <a class="btn btn-social-icon btn-instagram" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-instagram']);"><span class="fa fa-instagram"></span></a>
+    </div>
+</section>
+<!--modal-->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>2017 HR-V</h2>
+        </div>
+        <div class="modal-body">
+
+            <div  style="background-color:#3574C1;">
+                <div class="row text-center">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="wrapper custom_size_1">
+                            <div class="ribbon-wrapper-green">
+                                <div class="ribbon-green">Featured!</div>
+                            </div>
+                            <div><img class="custom_prod" src="/img/product.png"> </div>
+
+                            <div class="row">
+                                <div class="col-md-6 text-left" style="padding-left: 20%;padding-top: 3%; float:left;">
+                                    <h4>$19.465</h4>
+                                    <p style="color: black; font-weight: 600;">STARTING</p>
+                                    <P style="color: black; font-weight: 600;">MSRP*</P>
+                                </div>
+                                <div class="col-md-6 text-right" style="padding-right: 20%; padding-top: 3%;">
+                                    <h4>33/25</h4>
+                                    <p style="color: black; font-weight: 600;">HWY/CITY</p>
+                                    <P style="color: black; font-weight: 600;">MPG RATING*</P>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 text-right" style="padding-left: 0px;">
+                        <p class="custom_2_text_modal">
+                            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <p class="custom_modal_text">
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                    </p>
+                    <p class="custom_modal_text">
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                    </p>
+                    <p class="custom_modal_text">
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <a  href="Index.html#feature" class="btn btn-primary">See Equipments</a>
+        </div>
+    </div>
+
+</div>
+
+<div id="mobileMenu" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="close_menu" class="close">&times;</span>
+            
+        </div>
+        <div class="modal-body">
+
+               <ul>
+                                <li><a class="mobile_menu_links" href="/listings">New & Used Equipment</a></li>
+                                <hr>
+                                <li><a class="mobile_menu_links" href="#feature">Featured Listings</a></li>
+                                <hr>
+                                <li><a class="mobile_menu_links" href="#contact">Location & Contact</a></li>
+                                <hr>
+                                <li><a class="mobile_menu_links" href="#about">About</a></li>
+                            </ul> 
+
+        </div>
+       
+    </div>
+
+</div>
+
+<footer>
+    <div class="text-right" style="position: fixed; right:1.5%;bottom: 1%;">
+        <a href="#new" class="btn btn-social-icon btn-adn" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-adn']);"><span class="fa fa-adn"></span></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/polyfills.js"></script>
+    <script src="/js/half_circle_menu.js"></script>
+    <script src="/js/custom.js"></script>
+
+</footer>
+</body>

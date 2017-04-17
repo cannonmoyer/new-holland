@@ -1,0 +1,249 @@
+<body>
+<header  id="new" style=" background-image: url(/img/background_image-old.jpg);background-size: 100% 100%;">
+    <div class="text-center">
+        <div  class="custom_logo" style="margin-left: 0;"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <div id="mobile_menu" >
+        <button class="cn-button" id="cn-button">Menu</button>
+        <div class="cn-wrapper" id="cn-wrapper">
+            <ul>
+                <li><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
+                <li><a href="/#feature"><span class="glyphicon glyphicon-briefcase"></span></a></li>
+                <li><a href="/#contact"><span class="glyphicon glyphicon-phone-alt"></span></a></li>
+                <li><a href="/#about"><span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a href="/#"><span class="glyphicon glyphicon-folder-open"></span></a></li>
+            </ul>
+        </div>
+        <div id="cn-overlay" class="cn-overlay"></div>
+    </div>
+    <section>
+
+        <div class="container custom_height">
+
+            <div class="clearfix"></div>
+            <% count = 0 %>
+            <% while count < @listings.size  do %>
+                <div class="row text-center">
+                    <% if count < @listings.size %>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="wrapper custom_size_3">
+                            <div class="ribbon-wrapper-green">
+                                <% if @listings[count].featured %>
+                                    <div class="ribbon-green">Featured!</div>
+                                <% end %>
+                            </div>
+                            <div><img class="custom_prod" src="<%= @listings[count].image_name %>"> </div>
+                            <h5 style="font-weight: 600;"<%= @listings[count].name %></h5>
+                            <div class="row">
+                                <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                                    <h4><%= @listings[count].msrp %></h4>
+                                    <p style="color: black; font-weight: 600;">STARTING</p>
+                                    <P style="color: black; font-weight: 600;">MSRP*</P>
+                                </div>
+                                <div class="col-md-6 text-right" style="padding-right: 11%;">
+                                    <h4></h4>
+                                    <p style="color: black; font-weight: 600;"></p>
+                                    <P style="color: black; font-weight: 600;"></P>
+                                </div>
+                            </div>
+                            <% if @listings[count].link == nil or @listings[count].link == "" %>
+                                <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                            <% else %>
+                                <a href="<%= @listings[count].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                            <% end %>
+                        </div>
+                    </div>
+                    <% end %>
+                    <% count = count + 1 %>
+                    <% if count < @listings.size %>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="wrapper custom_size_3">
+                            <div class="ribbon-wrapper-green">
+                                <% if @listings[count].featured %>
+                                    <div class="ribbon-green">Featured!</div>
+                                <% end %>
+                            </div>
+                            <div><img class="custom_prod" src="<%= @listings[count].image_name %>"> </div>
+                            <h5 style="font-weight: 600;"<%= @listings[count].name %></h5>
+                            <div class="row">
+                                <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                                    <h4><%= @listings[count].msrp %></h4>
+                                    <p style="color: black; font-weight: 600;">STARTING</p>
+                                    <P style="color: black; font-weight: 600;">MSRP*</P>
+                                </div>
+                                <div class="col-md-6 text-right" style="padding-right: 11%;">
+                                    <h4></h4>
+                                    <p style="color: black; font-weight: 600;"></p>
+                                    <P style="color: black; font-weight: 600;"></P>
+                                </div>
+                            </div>
+                            <% if @listings[count].link == nil or @listings[count].link == "" %>
+                                <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                            <% else %>
+                                <a href="<%= @listings[count].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                            <% end %>
+                        </div>
+                    </div>
+                    <% end %>
+                    <% count = count + 1 %>
+                    <% if count < @listings.size %>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="wrapper custom_size_3">
+                            <div class="ribbon-wrapper-green">
+                                <% if @listings[count].featured %>
+                                    <div class="ribbon-green">Featured!</div>
+                                <% end %>
+                            </div>
+                            <div><img class="custom_prod" src="<%= @listings[count].image_name %>"> </div>
+                            <h5 style="font-weight: 600;"<%= @listings[count].name %></h5>
+                            <div class="row">
+                                <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                                    <h4><%= @listings[count].msrp %></h4>
+                                    <p style="color: black; font-weight: 600;">STARTING</p>
+                                    <P style="color: black; font-weight: 600;">MSRP*</P>
+                                </div>
+                                <div class="col-md-6 text-right" style="padding-right: 11%;">
+                                    <h4></h4>
+                                    <p style="color: black; font-weight: 600;"></p>
+                                    <P style="color: black; font-weight: 600;"></P>
+                                </div>
+                            </div>
+                            <% if @listings[count].link == nil or @listings[count].link == "" %>
+                                <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
+                            <% else %>
+                                <a href="<%= @listings[count].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
+                            <% end %>
+                        </div>
+                    </div>
+                    <% end %>
+                    <% count = count + 1 %>
+                </div>
+            <% end %>
+        </div>
+    </section>
+</header>
+<section >
+    <div id="desktop_menu" class="container" style="padding: 0;margin-top: -36px;">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <a href="/" type="button" class="btn btn-default">Home</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="/#feature" type="button" class="btn btn-default">Featured Equipment</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="/#contact" type="button" class="btn btn-default">Location & Contact</a>
+            </div>
+            <div class="btn-group" role="group">
+                <a href="/#about" type="button" class="btn btn-default">About</a>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<div  class="mobile_div"style="padding: 20px; background-color: white;"></div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>2017 HR-V</h2>
+        </div>
+        <div class="modal-body">
+
+                <div  style="background-color:#3574C1;">
+                    <div class="row text-center">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="wrapper custom_size_1">
+                                <div class="ribbon-wrapper-green">
+                                    <div class="ribbon-green">4 ORDERS</div>
+                                </div>
+                                <div><img class="custom_prod" src="/img/product.png"> </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
+                                        <h4>$19.465</h4>
+                                        <p style="color: black; font-weight: 600;">STARTING</p>
+                                        <P style="color: black; font-weight: 600;">MSRP*</P>
+                                    </div>
+                                    <div class="col-md-6 text-right" style="padding-right: 11%;">
+                                        <h4>33/25</h4>
+                                        <p style="color: black; font-weight: 600;">HWY/CITY</p>
+                                        <P style="color: black; font-weight: 600;">MPG RATING*</P>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 text-right" style="padding-left: 0px;">
+                            <p class="custom_2_text_modal">
+                                Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                            </p>
+                        </div>
+                        <p class="custom_modal_text">
+                            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                        </p>
+                        <p class="custom_modal_text">
+                            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                        </p>
+                        <p class="custom_modal_text">
+                            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a gallery of type and scrambled it to make a type specimen book.
+                        </p>
+
+                    </div>
+
+                </div>
+
+        </div>
+        <div class="modal-footer">
+            <a  href="Index.html#feature" class="btn btn-primary">See Equipments</a>
+        </div>
+    </div>
+
+</div>
+
+<div id="mobileMenu" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="close_menu" class="close">&times;</span>
+            
+        </div>
+        <div class="modal-body">
+
+                <ul>
+                                <li><a class="mobile_menu_links" href="/">Home</a></li>
+                                <hr>
+                                <li><a class="mobile_menu_links" href="#feature">Featured Listings</a></li>
+                                <hr>
+                                <li><a class="mobile_menu_links" href="#contact">Location & Contact</a></li>
+                                <hr>
+                                <li><a class="mobile_menu_links" href="#about">About</a></li>
+                            </ul> 
+
+        </div>
+       
+    </div>
+
+</div>
+
+
+<footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/polyfills.js"></script>
+    <script src="/js/half_circle_menu.js"></script>
+    <script src="/js/custom.js"></script>
+
+</footer>
+</body>

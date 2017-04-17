@@ -1,0 +1,29 @@
+<center><h2>Listings</h2></center>
+<%= link_to "Create Listing", new_listing_path, class: "btn btn-primary btn-sm" %>
+<table class="table table-bordered">
+		<th>Name</th> 
+		<th>MSRP</th> 
+		<th>Edit</th>
+		<th>Delete</th> 
+		 
+		 
+
+		<% @listings.each do |f| %>
+		
+			<tr>
+			
+			
+				<td><%= f.name %></td>
+				<td><%= f.msrp %></td>
+				
+				<td><%= link_to "Edit", edit_listing_path(f) %> </td>
+				<td><%= link_to "Delete", listing_path(f), data:{confirm: 'Are you sure?'},  method: :delete %></td>
+				
+			</tr>
+		<% end %>
+</table>
+<style>
+a{
+    color:black;
+}
+</style>
