@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index]
   def index
-    @listings = Listing.all
+    @listings = Listing.all.where(new: false)
   end
   
   def new
