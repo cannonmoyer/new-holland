@@ -8,7 +8,7 @@
     <div id="desktop_menu" class="container" style="background-color:#3574C1;padding: 0;margin-top: -36px;">
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
             <div class="btn-group" role="group">
-                <a href="/listings" type="button" class="btn btn-default">New & Used Equipment</a>
+                <a href="/listings" type="button" class="btn btn-default">Used Listings</a>
             </div>
             <div class="btn-group" role="group">
                 <a href="#feature" type="button" class="btn btn-default">Featured Equipment</a>
@@ -37,13 +37,13 @@
     </div>
 </section>
 <section>
-    <div class="container" style="background-color:#3574C1;">
+    <div class="container" style="background-color:#003e85;">
         <div class="row">
             <p style="padding:2% 6%;font-size: 1.7em; ">Welcome! Twin Hills Equipment is your new premier dealer for New Holland, Scag, Rhino, and more with 
                 over 75 years of experience in our sales and service departments!</p>
             <div class="col-md-2 col-xs-12" ></div>
             <div id="feature" class="text-center col-md-8 col-xs-12" style="border-top: 3px solid #fff; padding:2% 0%;">
-                <h3>Featured Listings</h3>
+                <h3>Featured Equipment</h3>
             </div>
             <div class="col-md-2 col-xs-12"></div>
         </div>
@@ -51,233 +51,121 @@
             <div class="row text-center">
                 <% if @size > 0 %>
                 <div class="col-md-6 col-xs-12">
+                    <a href="<%= @listings[0].link %>">
                     <div class="wrapper custom_size_1">
-                        <div class="ribbon-wrapper-green">
-                            <div class="ribbon-green">Featured!</div>
-                        </div>
-                        <div><img class="custom_prod" src="<%= @listings[0].image_name %>"> </div>
-                        <h5 style="font-weight: 600;"><%= @listings[0].name %></h5>
-                        <div class="row">
-                            <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                                <h4><%= @listings[0].msrp %></h4>
-                                <p style="color: black; font-weight: 600;">STARTING</p>
-                                <P style="color: black; font-weight: 600;">MSRP*</P>
-                            </div>
-                            <div class="col-md-6 text-right" style="padding-right: 11%;">
-                                <h4></h4>
-                                <p style="color: black; font-weight: 600;"></p>
-                                <P style="color: black; font-weight: 600;"></P>
-                            </div>
-                        </div>
-                        <% if @listings[0].link == nil or @listings[0].link == "" %>
-                            <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                        <% else %>
-                            <a href="<%= @listings[0].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                        <% end %>
+                       
+                        <img class="custom_prod" src="<%= @listings[0].image_name %>">
+                        <h2><%= @listings[0].name %></h2>
+                      
+                       
                     </div>
+                    </a>
                 </div>
             
-            <% end %>
+                <% end %>
             <% if @size > 1 %>
             
                 <div class="col-md-6 col-xs-12">
+                   <a href="<%= @listings[1].link %>">
                     <div class="wrapper custom_size_1">
-                        <div class="ribbon-wrapper-green">
-                            <div class="ribbon-green">Featured!</div>
-                        </div>
-                        <div><img class="custom_prod" src="<%= @listings[1].image_name %>"> </div>
-                        <h5 style="font-weight: 600;"><%= @listings[1].name %></h5>
-                        <div class="row">
-                            <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                                <h4><%= @listings[1].msrp %></h4>
-                                <p style="color: black; font-weight: 600;">STARTING</p>
-                                <P style="color: black; font-weight: 600;">MSRP*</P>
-                            </div>
-                            <div class="col-md-6 text-right" style="padding-right: 11%;">
-                                <h4></h4>
-                                <p style="color: black; font-weight: 600;"></p>
-                                <P style="color: black; font-weight: 600;"></P>
-                            </div>
-                        </div>
-                        <% if @listings[1].link == nil or @listings[1].link == "" %>
-                            <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                        <% else %>
-                            <a href="<%= @listings[1].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                        <% end %>
+                       
+                        <img class="custom_prod" src="<%= @listings[1].image_name %>">
+                        <h2><%= @listings[1].name %></h2>
+                      
+                       
                     </div>
+                    </a>
                 </div>
             <% end %>
         </div>
         <div class="row text-center">
-            <% if @size > 2 %>
-            <div class="col-md-4 col-xs-12">
-                <div class="wrapper custom_size_2">
-                    <div class="ribbon-wrapper-green">
-                        <div class="ribbon-green">Featured!</div>
+                <% if @size > 2 %>
+                <div class="col-md-6 col-xs-12">
+                    <a href="<%= @listings[2].link %>">
+                    <div class="wrapper custom_size_1">
+                       
+                        <img class="custom_prod" src="<%= @listings[2].image_name %>">
+                        <h2><%= @listings[2].name %></h2>
+                      
+                       
                     </div>
-                    <div><img class="custom_prod" src="<%= @listings[2].image_name %>"> </div>
-                    <h5 style="font-weight: 600;"><%= @listings[2].name %></h5>
-                    <div class="row">
-                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                            <h4><%= @listings[2].msrp %></h4>
-                            <p style="color: black; font-weight: 600;">STARTING</p>
-                            <p style="color: black; font-weight: 600;">MSRP*</p>
-                        </div>
-                        <div class="col-md-6 text-right" style="padding-right: 11%;">
-                            <h4></h4>
-                            <p style="color: black; font-weight: 600;"></p>
-                            <P style="color: black; font-weight: 600;"></p></p>
-                        </div>
-                    </div>
-                    <% if @listings[2].link == nil or @listings[2].link == "" %>
-                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                    <% else %>
-                        <a href="<%= @listings[2].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                    <% end %>
+                    </a>
                 </div>
-            </div>
-            <% end %>
+            
+                <% end %>
             <% if @size > 3 %>
-            <div class="col-md-4 col-xs-12">
-                <div class="wrapper custom_size_2">
-                    <div class="ribbon-wrapper-green">
-                        <div class="ribbon-green">Featured!</div>
+            
+                <div class="col-md-6 col-xs-12">
+                   <a href="<%= @listings[3].link %>">
+                    <div class="wrapper custom_size_1">
+                       
+                        <img class="custom_prod" src="<%= @listings[3].image_name %>">
+                        <h2><%= @listings[3].name %></h2>
+                      
+                       
                     </div>
-                    <div><img class="custom_prod" src="<%= @listings[3].image_name %>"> </div>
-                    <h5 style="font-weight: 600;"><%= @listings[3].name %></h5>
-                    <div class="row">
-                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                            <h4><%= @listings[3].msrp %></h4>
-                            <p style="color: black; font-weight: 600;">STARTING</p>
-                            <p style="color: black; font-weight: 600;">MSRP*</p>
-                        </div>
-                        <div class="col-md-6 text-right" style="padding-right: 11%;">
-                            <h4></h4>
-                            <p style="color: black; font-weight: 600;"></p>
-                            <P style="color: black; font-weight: 600;"></p></p>
-                        </div>
-                    </div>
-                    <% if @listings[3].link == nil or @listings[3].link == "" %>
-                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                    <% else %>
-                        <a href="<%= @listings[3].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                    <% end %>
+                    </a>
                 </div>
-            </div>
             <% end %>
-            <% if @size > 4 %>
-            <div class="col-md-4 col-xs-12">
-                <div class="wrapper custom_size_2">
-                    <div class="ribbon-wrapper-green">
-                        <div class="ribbon-green">Featured!</div>
+        </div>
+       <div class="row text-center">
+                <% if @size > 4 %>
+                <div class="col-md-6 col-xs-12">
+                    <a href="<%= @listings[4].link %>">
+                    <div class="wrapper custom_size_1">
+                       
+                        <img class="custom_prod" src="<%= @listings[4].image_name %>">
+                        <h2><%= @listings[4].name %></h2>
+                      
+                       
                     </div>
-                    <div><img class="custom_prod" src="<%= @listings[4].image_name %>"> </div>
-                    <h5 style="font-weight: 600;"><%= @listings[4].name %></h5>
-                    <div class="row">
-                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                            <h4><%= @listings[4].msrp %></h4>
-                            <p style="color: black; font-weight: 600;">STARTING</p>
-                            <p style="color: black; font-weight: 600;">MSRP*</p>
-                        </div>
-                        <div class="col-md-6 text-right" style="padding-right: 11%;">
-                            <h4></h4>
-                            <p style="color: black; font-weight: 600;"></p>
-                            <P style="color: black; font-weight: 600;"></p></p>
-                        </div>
-                    </div>
-                    <% if @listings[4].link == nil or @listings[4].link == "" %>
-                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                    <% else %>
-                        <a href="<%= @listings[4].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                    <% end %>
+                    </a>
                 </div>
-            </div>
+            
+                <% end %>
+            <% if @size > 5 %>
+            
+                <div class="col-md-6 col-xs-12">
+                   <a href="<%= @listings[5].link %>">
+                    <div class="wrapper custom_size_1">
+                       
+                        <img class="custom_prod" src="<%= @listings[5].image_name %>">
+                        <h2><%= @listings[5].name %></h2>
+                      
+                       
+                    </div>
+                    </a>
+                </div>
             <% end %>
         </div>
         <div class="row text-center">
-            <% if @size > 5 %>
-            <div class="col-md-4 col-xs-12">
-                <div class="wrapper custom_size_2">
-                    <div class="ribbon-wrapper-green">
-                        <div class="ribbon-green">Featured!</div>
+                <% if @size > 6 %>
+                <div class="col-md-6 col-xs-12">
+                    <a href="<%= @listings[6].link %>">
+                    <div class="wrapper custom_size_1">
+                       
+                        <img class="custom_prod" src="<%= @listings[6].image_name %>">
+                        <h2><%= @listings[6].name %></h2>
+                      
+                       
                     </div>
-                    <div><img class="custom_prod" src="<%= @listings[5].image_name %>"> </div>
-                    <h5 style="font-weight: 600;"><%= @listings[5].name %></h5>
-                    <div class="row">
-                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                            <h4><%= @listings[5].msrp %></h4>
-                            <p style="color: black; font-weight: 600;">STARTING</p>
-                            <p style="color: black; font-weight: 600;">MSRP*</p>
-                        </div>
-                        <div class="col-md-6 text-right" style="padding-right: 11%;">
-                            <h4></h4>
-                            <p style="color: black; font-weight: 600;"></p>
-                            <P style="color: black; font-weight: 600;"></p></p>
-                        </div>
-                    </div>
-                    <% if @listings[5].link == nil or @listings[5].link == "" %>
-                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                    <% else %>
-                        <a href="<%= @listings[5].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                    <% end %>
+                    </a>
                 </div>
-            </div>
-            <% end %>
-            <% if @size > 6 %>
-            <div class="col-md-4 col-xs-12">
-                <div class="wrapper custom_size_2">
-                    <div class="ribbon-wrapper-green">
-                        <div class="ribbon-green">Featured!</div>
-                    </div>
-                    <div><img class="custom_prod" src="<%= @listings[6].image_name %>"> </div>
-                    <h5 style="font-weight: 600;"><%= @listings[6].name %></h5>
-                    <div class="row">
-                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                            <h4><%= @listings[6].msrp %></h4>
-                            <p style="color: black; font-weight: 600;">STARTING</p>
-                            <p style="color: black; font-weight: 600;">MSRP*</p>
-                        </div>
-                        <div class="col-md-6 text-right" style="padding-right: 11%;">
-                            <h4></h4>
-                            <p style="color: black; font-weight: 600;"></p>
-                            <P style="color: black; font-weight: 600;"></p></p>
-                        </div>
-                    </div>
-                    <% if @listings[6].link == nil or @listings[6].link == "" %>
-                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                    <% else %>
-                        <a href="<%= @listings[6].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                    <% end %>
-                </div>
-            </div>
-            <% end %>
+            
+                <% end %>
             <% if @size > 7 %>
-            <div class="col-md-4 col-xs-12">
-                <div class="wrapper custom_size_2">
-                    <div class="ribbon-wrapper-green">
-                        <div class="ribbon-green">Featured!</div>
+            
+                <div class="col-md-6 col-xs-12">
+                   <a href="<%= @listings[7].link %>">
+                    <div class="wrapper custom_size_1">
+                       
+                        <img class="custom_prod" src="<%= @listings[7].image_name %>">
+                        <h2><%= @listings[7].name %></h2>
+                      
+                       
                     </div>
-                    <div><img class="custom_prod" src="<%= @listings[7].image_name %>"> </div>
-                    <h5 style="font-weight: 600;"><%= @listings[7].name %></h5>
-                    <div class="row">
-                        <div class="col-md-6 text-left" style="padding-left: 11%; float:left;">
-                            <h4><%= @listings[7].msrp %></h4>
-                            <p style="color: black; font-weight: 600;">STARTING</p>
-                            <p style="color: black; font-weight: 600;">MSRP*</p>
-                        </div>
-                        <div class="col-md-6 text-right" style="padding-right: 11%;">
-                            <h4></h4>
-                            <p style="color: black; font-weight: 600;"></p>
-                            <P style="color: black; font-weight: 600;"></p></p>
-                        </div>
-                    </div>
-                    <% if @listings[7].link == nil or @listings[7].link == "" %>
-                        <a type="buttom" id="myBtn" class="btn btn-primary custom_bt_1">See More</a>
-                    <% else %>
-                        <a href="<%= @listings[7].link %>" type="buttom" class="btn btn-primary custom_bt_1">See More</a>
-                    <% end %>
+                    </a>
                 </div>
-            </div>
             <% end %>
         </div>
         <div class="row">
@@ -406,9 +294,9 @@
         <div class="modal-body">
 
                <ul>
-                                <li><a class="mobile_menu_links" href="/listings">New & Used Equipment</a></li>
+                                <li><a class="mobile_menu_links" href="/listings">Used Listings</a></li>
                                 <hr>
-                                <li><a class="mobile_menu_links" href="#feature">Featured Listings</a></li>
+                                <li><a class="mobile_menu_links" href="#feature">Featured Equipment</a></li>
                                 <hr>
                                 <li><a class="mobile_menu_links" href="#contact">Location & Contact</a></li>
                                 <hr>
